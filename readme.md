@@ -28,7 +28,7 @@ The simulation results can be found in
 
 which is derived with Cadence Spectre. The three numbers are DC gain (dB), phase margin (degree) and GBW (GHz), respectively. If less than three numbers are shown in the sim.out file, it's because the gain is a less-than-zero value and no valid phase margin and GBW result can be computed. If so, the FoM is set to 0.
 
-The circuit design is also given in form of graph adjacency matrix. The definition of the graph and its adjacency matrix can be found in our paper (#index). In short, the graph nodes represent the circuit nodes and the edges represent different devices. The 
+The circuit design is also given in form of graph adjacency matrix. The definition of the graph and its adjacency matrix can be found in our paper (#index). In short, the graph nodes represent the circuit nodes and the edges represent different devices.
 
 | Edge weight | Device                                 |
 | :---------: | -------------------------------------- |
@@ -57,6 +57,20 @@ The circuit design is also given in form of graph adjacency matrix. The definiti
 |     22      | Serial resistor and feedback -gm       |
 |     23      | Parallel capacitor and feedback -gm    |
 |     24      | Serial capacitor and feedback -gm      |
+
+The adjacency matrix is given in
+> /circuit_10k_clean/{id}/vec.csv
+
+with the following intepretation.
+
+| 0    | 0    | {4}  | {5}  | 0    |
+| ---- | ---- | ---- | ---- | ---- |
+| 0    | 0    | 5    | {1}  | {2}  |
+| {4}  | 5    | 0    | 6    | {3}  |
+| {5}  | {1}  | 6    | 0    | 5    |
+| 0    | {2}  | {3}  | 5    | 0    |
+
+Most elements in the adjacency matrix are fixed so that the generated circuit is likely to be valid. The {1} to {5} in the matrix should be replaced by the 1st to 5th number in vec.csv, and the result is the adjacency matrix of that circuit.
 
 The 10k designs are randomly generated based on the code of https://github.com/jialinlu/OPAMP-Generator.
 
