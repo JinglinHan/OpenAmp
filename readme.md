@@ -86,11 +86,12 @@ you can find the vertorized adjacency matrix of each circuit and its simulation 
 Have fun :）
 
 
+
 _The authers appreciate Dr. Jialin Lu for his contribution to open-source EDA community and also for giving us the insights on topology generation._
 
 _The authors also appreciate Dr. Ming Cheng for all the constructive discussions with us._
 
-
+***
 
 ## Reference {#index}
 
