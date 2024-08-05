@@ -93,7 +93,7 @@ _The authors also appreciate Dr. Ming Cheng for all the constructive discussions
 
 ***
 
-## Reference {#index}
+## Reference
 
 J. Han, Y. Leng, X. Zhang and P. Wang, "TSO-Flow: A Topology Synthesis and Optimization Workflow for Operational Amplifiers with Invertible Graph Generative Model", 2024 ACM/IEEE International Conference on Computer-Aided Design (ICCAD), New Jersey, USA.
 
